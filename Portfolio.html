@@ -1,0 +1,2587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #111;
+        color: #fff;
+        height: 100vh;
+        z-index: 0;
+    }
+
+    .container {
+        display: flex;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .left-panel {
+        position: relative;
+        width: 45%;
+        background: #f1c40f;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .yellow-corner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #111;
+        clip-path: polygon(100% 0, 100% 100%, 0 100%);
+        z-index: 1;
+    }
+
+    .profile-img {
+        position: relative;
+        z-index: 2;
+        width: 450px; /*80%*/
+        height: 598.006px;
+        border-radius: 25px;
+        object-fit: cover;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    }
+
+    .right-panel {
+        width: 55%;
+        padding: 60px;
+        position: relative;
+
+        margin-top: 140px;
+    }
+
+    .content {
+        max-width: 600px;
+    }
+
+    h1 {
+        font-size: 3rem;
+        line-height: 1.3;
+        margin-bottom: 20px;
+    }
+
+    .dash {
+        color: #f1c40f;
+        font-size: 2.5rem;
+        margin-right: 13px;
+    }
+
+    .highlight {
+        color: #f1c40f;
+        font-weight: 700;
+    }
+
+    .title-white {
+        font-weight: 700;
+        font-size: 2.6rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        margin-bottom: 30px;
+    }
+
+    .more-btn {
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        border: 2px solid #f1c40f;
+        border-radius: 50px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        position: relative;
+        cursor: pointer;
+        background-color: black;
+    }
+
+    .more-btn .text {
+        padding: 16px 25px;
+        color: white;
+        font-weight: bold;
+        position: relative;
+        z-index: 2;
+
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .more-btn .arrow {
+        background: #f1c40f;
+        padding: 19px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #111;
+        z-index: 2;
+        transition: all 0.4s ease;
+        font-size: 15px;
+    }
+
+    .more-btn:hover .arrow {
+        background: transparent;
+        color: #ffffff;
+    }
+
+    .more-btn::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 0;
+        background: #f1c40f;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        transition: width 0.4s ease;
+    }
+
+    .more-btn:hover::before {
+        width: 100%;
+    }
+
+    .more-btn:hover .text {
+        color: #111;
+        z-index: 2;
+    }
+
+    /* Home button section CSS here */
+    .home-section {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #111;
+        color: white;
+        z-index: 100;
+    }
+
+
+    /* Side button part CSS */
+    .sidebar {
+        position: fixed;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        align-items: flex-end;
+        z-index: 1000;
+    }
+
+    .sidebar-button {
+        display: flex;
+        align-items: center;
+        background-color: #454545;
+        color: white;
+        border-radius: 30px;
+        padding: 13px;
+        width: 54px;
+        height: 54px; /*added*/
+        overflow: hidden;
+        white-space: nowrap;
+        transition: width 0.3s ease;
+        justify-content: flex-end;  /* icon stays right */
+        cursor: pointer;
+        position: relative; /*added*/
+
+        /*color: #eee;
+        height: 55px;
+        justify-content: center;
+        position: relative;
+        transition: width 0.4s ease, background-color 0.3s ease;*/
+    }
+
+    .sidebar-button.active-sidebar {
+        background-color: #f1b600 !important;
+        color: white;
+    }
+
+    .sidebar-button.active-sidebar .icon {
+        color: white !important;
+    }
+
+    .sidebar-button .icon {
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        width: auto;/*65px*/
+
+        z-index: 10;
+        margin-right: 4px;
+        transition: margin 0.3s ease;
+    }
+
+    .sidebar-button .label {
+        color: white;
+        font-weight: bold;
+        white-space: nowrap;
+        margin-left: 10px;
+        opacity: 0;
+        transform: translateX(-10px);
+        transition: all 0.3s ease;
+
+        margin-right: 10px;
+        letter-spacing: 1.5px;
+        position: absolute;
+        right: 21px;
+        /*font-size: 16px;*/
+    }
+
+    /* On hover - expand only hovered button */
+    .sidebar-button:hover {
+        background-color: #f1b600;
+        width: 150px;
+
+        justify-content: flex-start;/*added*/
+    }
+
+    /*Edited part*/
+    /*.sidebar-button span {
+        opacity: 0;
+        margin-right: 10px;
+        transition: opacity 0.3s ease;
+    }*/
+
+    /*.sidebar-button:hover span {
+        opacity: 1;
+    }*/
+
+    /* Move icon slightly left on hover */
+    .sidebar-button:hover .icon {
+        margin-left: 15px;
+    }
+    
+    .sidebar-button:hover .label {
+        opacity: 1;
+        /*transform: translateX(0);*/
+
+        transform: translateX(0); /*-40px*/
+    }
+
+    /* Mode switching button CSS*/
+    .theme-toggle {
+        position: fixed;
+        top: 20px;
+        right: 30px;
+        background-color: #2e2e2e;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        z-index: 1000;
+    }
+
+    .theme-toggle:hover {
+        background-color: #f1c40f;
+        color: #111;
+    }
+
+    /* Light Theme Overrides */
+    body.light-theme {
+        background-color: #f9f9f9;
+        color: #111;
+    }
+
+    body.light-theme .intro-text h1,
+    body.light-theme .intro-text h2,
+    body.light-theme .intro-text p {
+    color: #111;
+    }
+
+    body.light-theme .side-buttons .nav-btn {
+        background-color: #e0e0e0;
+        color: #111;
+    }
+
+    body.light-theme .side-buttons .nav-btn:hover {
+        background-color: #f1c40f;
+    }
+
+    body.light-theme .side-buttons .nav-btn:hover .label {
+        color: #111;
+    }
+
+    body.light-theme .more-btn {
+        border-color: #111;
+        color: #111;
+    }
+
+    body.light-theme .more-btn:hover {
+        background-color: #f1c40f;
+        color: #111;
+    }
+
+    /* 'More about me' button Modal CSS */
+    .modal-container {
+        position: fixed;
+        top: 96px; /* 1 inch from top */
+        left: 211px; /* 2.2 inches from left */
+        right: 211px; /* 2.2 inches from right */
+        bottom: 96px; /* 1 inch from bottom */
+        background-color: #111;
+        border-radius: 16px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+        display: flex;
+        align-items: center;
+        /*justify-content: center;*/
+        z-index: 999;
+
+        flex-direction: column; /* Added: stack items vertically */
+        padding-top: 30px; /* Added: push content away from top */
+    }
+
+    #resumeModal {
+        display: none;
+        position: fixed;
+        z-index: 999; /* Make sure it's above other content */
+    }
+
+
+    .modal-hidden {
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute; /* or fixed if needed */
+        z-index: -999;
+    }
+
+
+    .modal-content {
+        text-align: center;
+        position: relative;
+
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .modal-content .background-text {
+        font-size: 120px;
+        font-weight: 900;
+        color: rgba(255, 255, 255, 0.05);
+        letter-spacing: 10px;
+
+        margin: 0px;
+        position: absolute;
+        z-index: 1;
+        margin: 0;
+        top: 7.2%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .modal-content .foreground-text {
+        position: relative; /*absolute*/
+        top: 10px; /*1px*/
+        left: 0; /*50%*/
+        transform: none; /*translateX(-50%)*/
+        font-size: 51px;
+        font-weight: 900;
+
+        z-index: 2;
+        letter-spacing: 4px;
+    }
+
+    .foreground-text .white {
+        color: white;
+    }
+
+    .foreground-text .yellow {
+        color: #f8aa00;
+    }
+
+    /* Modal Close button style */
+    .modal-close-btn {
+        position: absolute;
+        top: -25px;
+        right: -25px;
+        background: transparent;
+        color: white;
+        font-size: 26px;
+        border: 3px solid white;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        line-height: 39px;
+        text-align: center;
+        cursor: pointer;
+        z-index: 1001;
+        background-color: #111;
+        transition: transform 0.2s ease;
+    }
+
+    .modal-close-btn:hover {
+        transform: scale(1.1);
+    }
+
+    /* Modal detail part CSS */
+    .modal-scroll-content {
+        max-height: 100%;
+        overflow-y: auto;
+        padding-top: 20px; /* creates space below 'RESUME' & 'ABOUT ME' */
+        padding-left: 24px;
+        padding-right: 24px;
+        box-sizing: border-box;
+
+        scrollbar-width: thin;
+        scrollbar-color: #f8aa00 #1b1b1b;
+    }
+
+    .personal-section {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+        padding: 0 40px;
+        color: white;
+        gap: 30px;
+    }
+
+    .left-info {
+        flex: 1;
+    }
+
+    .left-info h2 {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    .info-columns {
+        display: flex;
+        gap: 40px;
+    }
+
+    .info-col p {
+        margin: 8px 0;
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .available {
+        color: #00ff00;
+        font-weight: bold;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    /* 'DOWNLOAD CV' CSS */
+    .cv-button-container {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 0px; /* Adjust to align exactly with 'Insta' */
+    }
+
+    .download-cv {
+        margin-top: 30px;
+        padding: 12px 24px;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        border: 2px solid #f8aa00;
+        border-radius: 30px;
+        position: relative;
+        padding-right: 60px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .download-cv .download-icon {
+        background-color: #f8aa00;
+        color: white;
+        border-radius: 50%;
+        width: 42px;
+        height: 42px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 19px;
+    }
+
+    .right-stats {
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .stat-box {
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 30px;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .stat-box h1 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: normal;
+    }
+
+    .stat-box .yellow-text {
+        font-size: 36px;
+        font-weight: bold;
+        color: #f8aa00;
+    }
+
+    /* My Skills CSS part here */
+    .skills-section {
+        text-align: center;
+        color: white;
+        margin-top: 60px;
+    }
+
+    .skills-heading {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 30px;
+        justify-items: center;
+    }
+
+    .skill {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .progress-circle {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background: conic-gradient(#f8aa00 0% 0%, #1b1b1b 0% 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .progress-circle span {
+        color: white;
+        z-index: 1;
+    }
+
+    .skill-percent {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 0px;
+        background: conic-gradient(#f8aa00 0% 0%, #111 0% 100%);
+    }
+
+    /* Modal scrollling part here */
+    .modal-content {
+        max-height: 80vh;         /* Adjust this height if needed */
+        overflow-y: auto;
+        scrollbar-width: thin;
+        scrollbar-color: #f8aa00 #1b1b1b;  /* Optional: styled scrollbar for Firefox */
+    }
+
+    /* Optional: style scrollbar for WebKit (Chrome, Edge) */
+    .modal-content::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .modal-content::-webkit-scrollbar-thumb {
+        background-color: #f8aa00;
+        border-radius: 10px;
+    }
+
+    .modal-content::-webkit-scrollbar-track {
+        background-color: #1b1b1b;
+    }
+
+
+    /* Experience and Education part CSS here */
+    .experience-education {
+        color: white;
+        margin-top: 40px;
+        padding: 0 30px;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 80px;
+    }
+
+    .timeline {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+    }
+
+    .timeline-column {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        min-width: 300px;
+    }
+
+    .timeline-item {
+        position: relative;
+        padding-left: 50px;
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: 30px;
+    }
+
+    .timeline-item .timeline-icon {
+        position: absolute;
+        left: -20px;
+        top: -38%;
+        background-color: #f8aa00;
+        color: white;
+        border-radius: 50%;
+        width: 52px;
+        height: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+    }
+
+    .timeline-item .timeline-date {
+        background: #2a2a2a;
+        color: white;
+        font-weight: bold;
+        font-size: 13px;
+        padding: 4px 12px;
+        border-radius: 12px;
+        display: inline-block;
+        margin-bottom: 10px;
+        
+        position: absolute;
+        left: 50px;
+        top: -40%;
+    }
+
+    .timeline-item .timeline-title {
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 8px;
+        text-align: left;
+    }
+
+    .timeline-item .timeline-title span {
+        font-weight: normal;
+        color: #bcbcbc;
+        font-size: 16px;
+        margin-left: 6px;
+    }
+
+    .timeline-item p {
+        font-size: 15px;
+        color: #d0d0d0;
+        line-height: 1.5;
+        margin: 0;
+        text-align: left;
+    }
+
+
+    /* My Portfolio sidebar button interface CSS here */
+    /* Entire portfolio page */
+    .portfolio-section {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #0e0e0e;
+        color: white;
+        padding: 60px 30px;
+        overflow-y: auto;
+        z-index: 600;
+        display: none;
+        flex-direction: column;
+    }
+
+    /* Make visible */
+    .portfolio-section.active {
+        display: flex;
+    }
+
+    /* Background large text */
+    .portfolio-header {
+        position: relative;
+        text-align: center;
+        margin-bottom: 80px;
+        margin-top: 30px;
+    }
+
+    .portfolio-header h2 {
+        font-size: 38px;
+        font-weight: 900;
+        z-index: 2;
+        position: relative;
+        top: 9px;
+        letter-spacing: 3px;
+    }
+
+    .portfolio-header .white-work {
+        color: white;
+    }
+
+    .portfolio-header .yellow-work {
+        color: #f8aa00;
+    }
+
+    .portfolio-header .background-text-work {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 110px;
+        font-weight: 900;
+        color: rgba(255, 255, 255, 0.05);
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        letter-spacing: 10px;
+    }
+
+    /* Filter Buttons */
+    .portfolio-filters {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+    }
+
+    .portfolio-filters button {
+        background: transparent;
+        border: none;
+        color: #ccc;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        padding: 8px 12px;
+        transition: color 0.3s;
+    }
+
+    .portfolio-filters button:hover,
+    .portfolio-filters button.active {
+        color: #000; /*#f8aa00*/
+    }
+
+    .filter-btn {
+        padding: 10px 20px;
+        margin: 5px;
+        background-color: transparent;
+        border: 2px solid #f8aa00;
+        color: white;
+        font-weight: bold;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+        background-color: #f8aa00;
+        color: black;
+    }
+
+    /* Image grid */
+    .portfolio-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        justify-content: center;
+        padding: 0 60px;
+        box-sizing: border-box;
+    }
+
+    .portfolio-gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    .portfolio-gallery img:hover {
+        transform: scale(1.03);
+    }
+
+    /* Portfolio image overlay slider */
+    .portfolio-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .portfolio-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    .portfolio-item:hover img {
+        transform: scale(1.05);
+    }
+
+    .portfolio-item .overlay {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: #f8aa00;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: left 0.4s ease;
+        font-weight: bold;
+        font-size: 18px;
+        border-radius: 10px;
+
+        z-index: 1;
+    }
+
+    .portfolio-item:hover .overlay {
+        left: 0;
+
+        pointer-events: none;
+    }
+
+    .overlay-text {
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+
+        opacity: 1;
+        z-index: 2;
+    }
+
+    /* Hide class for toggle */
+    .hidden {
+        display: none;
+    }
+
+    /* Home section switching CSS here */
+    .homepage, portfolio {
+        transition: opacity 0.3s ease;
+    }
+
+    /* gallery modal close button */
+    .modal-container2 {
+        position: fixed;
+        top: 60px; /* 1 inch from top */
+        left: 270px; /* 2.2 inches from left */
+        right: 270px; /* 2.2 inches from right */
+        bottom: 52px; /* 1 inch from bottom */
+        background-color: #111;
+        border-radius: 16px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+        display: flex;
+        align-items: center;
+        /*justify-content: center;*/
+        z-index: 999;
+
+        flex-direction: column; /* Added: stack items vertically */
+        padding-top: 30px; /* Added: push content away from top */
+    }
+
+    .modal-close-btn2 {
+        position: absolute;
+        top: -25px;
+        right: -25px;
+        background: transparent;
+        color: white;
+        font-size: 26px;
+        border: 3px solid white;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        line-height: 39px;
+        text-align: center;
+        cursor: pointer;
+        z-index: 1010;
+        background-color: #111;
+        transition: transform 0.2s ease;
+    }
+
+    .modal-close-btn2:hover {
+        transform: scale(1.1);
+    }
+
+    .project-info {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 16px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        gap: 60px;
+    }
+
+    .project-info p {
+        margin: 8px 0;
+        text-align: left;
+    }
+
+    .project-left, .project-right {
+        width: auto;
+        min-width: 250px;
+        text-align: left;
+        
+    }
+
+    .project-info i {
+        margin-right: 8px;
+        color: #f8aa00;
+    }
+
+    .project-image {
+        text-align: center;
+    }
+
+    .project-image img {
+        width: 100%;
+        max-width: 426.66px;
+        height: 283.66px;
+        border-radius: 12px;
+        margin: 0 auto;
+    }
+
+    /* Blog sidebar button interface CSS here */
+    /* Blog Section Base */
+    .blogging-section {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #0e0e0e;
+        color: white;
+        padding: 60px 30px;
+        overflow-y: auto;
+        z-index: 500;
+        display: none;
+        flex-direction: column;
+    }
+
+    /* Make visible */
+    .blogging-section.active {
+        display: flex;
+    }
+
+    /* Background large text */
+    .blogging-header {
+        position: relative;
+        text-align: center;
+        margin-bottom: 80px;
+        margin-top: 30px;
+    }
+
+    .blogging-header h2 {
+        font-size: 38px;
+        font-weight: 900;
+        z-index: 2;
+        position: relative;
+        top: 9px;
+        letter-spacing: 3px;
+    }
+
+    .blogging-header .white-blog {
+        color: white;
+    }
+
+    .blogging-header .yellow-blog {
+        color: #f8aa00;
+    }
+
+    .blogging-header .background-text-blog {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 110px;
+        font-weight: 900;
+        color: rgba(255, 255, 255, 0.05);
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        letter-spacing: 10px;
+    }
+
+    /* Blog cards CSS here */
+    .blog-card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        padding: 0 20px;
+    }
+
+    .blog-card {
+        background-color: #1a1a1a;
+        border-radius: 10px;
+        overflow: hidden;
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+    }
+
+    .blog-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .blog-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .blog-content {
+        border-top: 4px solid #f8aa00;
+        padding: 20px;
+    }
+
+    .blog-content h3 {
+        font-size: 18px;
+        color: white;
+        margin-bottom: 10px;
+        font-weight: bold;
+
+        position: relative;
+        transition: color 0.3s ease, transform 0.3s ease;
+        cursor: pointer;
+    }
+
+    .blog-content h3::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background-color: #f8aa00;
+        bottom: -4px;
+        left: 0;
+        transition: width 0.3s ease;
+    }
+
+    .blog-content h3:hover {
+        color: #f8aa00;
+        transform: translateY(-2px);
+    }
+
+    .blog-content h3:hover::after {
+        width: 100%;
+    }
+
+    .blog-content p {
+        font-size: 14px;
+        color: #cccccc;
+        line-height: 1.5;
+    }
+
+    @media (max-width: 992px) {
+    .blog-card {
+        width: 100%;
+        max-width: 90%;
+        }
+    }
+
+    /* Blog card modal CSS here */
+    .blog-modal-container {
+        position: fixed;
+        top: 60px; /* 1 inch from top */
+        left: 320px; /* 2.2 inches from left */
+        right: 320px; /* 2.2 inches from right */
+        bottom: 52px; /* 1 inch from bottom */
+        background-color: #111;
+        border-radius: 16px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+        display: flex;
+        align-items: center;
+        /*justify-content: center;*/
+        z-index: 999;
+
+        box-sizing: border-box;
+        flex-direction: column; /* Added: stack items vertically */
+        /*padding-top: 30px;  Added: push content away from top */
+        /*padding: 0 30px 0 30px;*/
+        padding: 30px 0;
+    }
+
+    .blog-modal-content {
+        /*background-color: #1a1a1a;
+        color: white;
+        width: 90%;
+        max-width: 700px;
+        padding: 30px;
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);*/
+
+        text-align: center;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        /*overflow: hidden;*/
+
+        max-height: 80vh;
+        overflow-y: auto;
+        box-sizing: border-box;
+        padding-right: 0;
+        margin-right: 0;
+        scrollbar-width: thin;
+        scrollbar-color: #f8aa00 #1b1b1b;
+    }
+
+    .blog-modal-close-btn {
+        position: absolute;
+        top: -25px;
+        right: -25px;
+        background: transparent;
+        color: white;
+        font-size: 26px;
+        border: 3px solid white;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        line-height: 39px;
+        text-align: center;
+        cursor: pointer;
+        z-index: 1010;
+        background-color: #111;
+        transition: transform 0.2s ease;
+    }
+
+    .blog-modal-close-btn:hover {
+        transform: scale(1.1);
+    }
+
+    .blog-modal-header {
+        text-align: center;
+        margin-bottom: 60px;
+        position: relative;
+        margin-top: 30px;
+    }
+
+    .blog-modal-header h2 {
+        font-size: 38px;
+        font-weight: 900;
+        position: relative;
+        z-index: 2;
+    }
+
+    .blog-modal-bg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 110px;
+        font-weight: 900;
+        color: rgba(255, 255, 255, 0.05);
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        letter-spacing: 10px;
+    }
+
+    .blog-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        font-size: 10px;
+        margin-bottom: 10px;
+        justify-content: left;
+        padding: 0 0 0 70px;
+    }
+
+    .blog-post-meta i {
+        color: #f8aa00;
+        margin-right: 5px;
+    }
+
+    .blog-modal-content h3 {
+        text-align: left;
+        font-size: 42px;
+        margin-bottom: 20px;
+        font-weight: 700;
+        justify-content: left;
+        padding: 0 0 0 70px;
+        width: 85%;
+    }
+
+    .blog-image {
+        text-align: center;
+    }
+
+    .blog-image img {
+        width: 85%;
+        max-height: 370px;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    .white-blog {
+        color: white;
+    }
+
+    .yellow-blog {
+        color: #f8aa00;
+    }
+
+    .blog-modal-content {
+        max-height: 80vh;         /* Adjust this height if needed */
+        overflow-y: auto;
+        scrollbar-width: thin;
+        scrollbar-color: #f8aa00 #1b1b1b;  /* Optional: styled scrollbar for Firefox */
+    }
+
+    /* Optional: style scrollbar for WebKit (Chrome, Edge) */
+    .blog-modal-content::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .blog-modal-content::-webkit-scrollbar-thumb {
+        background-color: #f8aa00;
+        border-radius: 10px;
+    }
+
+    .blog-modal-content::-webkit-scrollbar-track {
+        background-color: #1b1b1b;
+    }
+
+    /* CONTACT Sidebar 4th button CSS here */
+    .contact-section {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #0e0e0e;
+        color: white;
+        padding: 60px 30px;
+        overflow-y: auto;
+        z-index: 500;
+        display: none;
+        flex-direction: column;
+    }
+
+    /* Make visible */
+    .contact-section.active {
+        display: flex;
+    }
+
+    /* Background large text */
+    .contact-header {
+        position: relative;
+        text-align: center;
+        margin-bottom: 80px;
+        margin-top: 30px;
+    }
+
+    .contact-header h2 {
+        font-size: 38px;
+        font-weight: 900;
+        z-index: 2;
+        position: relative;
+        top: 9px;
+        letter-spacing: 4px;
+    }
+
+    .contact-header .white-conta {
+        color: white;
+    }
+
+    .contact-header .yellow-conta {
+        color: #f8aa00;
+    }
+
+    .contact-header .background-text-conta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 110px;
+        font-weight: 900;
+        color: rgba(255, 255, 255, 0.05);
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        letter-spacing: 10px;
+    }
+
+    /* CONTACT part further CSS here */
+    .contact-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 60px;
+        margin-top: 40px;
+        flex-wrap: wrap;
+    }
+
+    .contact-left {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    .contact-right {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    .contact-title {
+        color: white;
+        font-weight: 700;
+        font-size: 24px;
+        margin: 0 0 15px 160px;
+    }
+
+    .contact-description {
+        color: #aaa;
+        line-height: 1.6;
+        font-size: 18px;
+        margin: 0 0 30px 160px;
+        text-align: justify;
+    }
+
+    .contact-info .info-box {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        margin: 0 0 0 160px;
+    }
+
+    .contact-info .info-box i {
+        font-size: 28px;
+        margin-right: 15px;
+    }
+
+    .info-box i {
+        color: #f8aa00
+    }
+
+    .info-title {
+        font-size: 14px;
+        color: #aaa;
+        font-weight: 500;
+    }
+
+    .info-value {
+        color: white;
+        font-size: 15px;
+        margin-top: 3px;
+    }
+
+    .social-icons {
+        margin: 30px 0 0 160px;
+    }
+
+    .social-icons i {
+        font-size: 30px;
+        margin-right: 15px;
+        color: white;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    .social-icons i:hover {
+        color: #f8aa00;
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin: 0 150px 0 0;
+    }
+
+    .input-group {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 16px;
+        border-radius: 30px;
+        background-color: #1c1c1c;
+        border: none;
+        color: white;
+        font-size: 14px;
+    }
+
+    .contact-form textarea {
+        border-radius: 20px;
+        resize: vertical;
+    }
+
+    .send-btn-wrapper {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .send-btn {
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        border: 2px solid #f1c40f;
+        border-radius: 50px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        position: relative;
+        color: white;
+        background-color: black;
+        padding: 12px 80px 12px 30px;
+        font-weight: 600;
+        font-size: 15px;
+        height: 60px;
+        cursor: pointer;
+    }
+
+    .send-icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 60px;
+        background-color: #f8aa00;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        color: white;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        font-size: 18px;
+    }
+
+    .send-btn:hover {
+        background-color: #f8aa00;
+        color: black;
+    }
+
+    .send-btn:hover .send-icon {
+        background-color: white;
+        color: #f8aa00;
+    }
+
+    /* PROFILE button of Sidebar section */
+    .profile-section {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #0e0e0e;
+        color: white;
+        padding: 60px 30px;
+        overflow-y: auto;
+        z-index: 500;
+        display: none;
+        flex-direction: column;
+    }
+
+    /* Make visible */
+    .profile-section.active {
+        display: flex;
+    }
+
+    /* Background large text */
+    .profile-header {
+        position: relative;
+        text-align: center;
+        margin-bottom: 80px;
+        margin-top: 30px;
+    }
+
+    .profile-header h2 {
+        font-size: 38px;
+        font-weight: 900;
+        z-index: 2;
+        position: relative;
+        top: 9px;
+        letter-spacing: 4px;
+    }
+
+    .profile-header .white-prof {
+        color: white;
+    }
+
+    .profile-header .yellow-prof {
+        color: #f8aa00;
+    }
+
+    .profile-header .background-text-prof {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 110px;
+        font-weight: 900;
+        color: rgba(255, 255, 255, 0.05);
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        letter-spacing: 10px;
+    }
+
+    /* Further change in CSS of sidebar button */
+    #portfolio,
+.portfolio-section {
+    z-index: 600;
+}
+
+#blogging,
+.blogging-section {
+    z-index: 500;
+}
+
+#contact,
+.contact-section {
+    z-index: 400;
+}
+
+#profile,
+.profile-section {
+    z-index: 300;
+}
+
+#home,
+.home-section {
+    z-index: 200;
+}
+
+section {
+    position: fixed; /* Ensure they stack */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    background: #0e0e0e;
+    overflow-y: auto;
+}
+
+section.active {
+    display: flex !important;
+}
+
+section.hidden {
+    display: none !important;
+}
+
+    /* CSS for the notification button after message sent */
+    .toast {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #2ecc71;
+        color: white;
+        padding: 14px 24px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        font-weight: bold;
+        z-index: 9999;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .toast.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .toast.hidden {
+        display: none;
+    }
+
+
+  </style>
+</head>
+<body>
+  <section id="homepage" class="home-section active">
+  <div class="container">
+    <div class="left-panel">
+      <div class="yellow-corner"></div>
+      <img src="C:\Users\FAIZ AHMAD\OneDrive\Pictures\Camera Roll\faiz_eid.jpg" alt="Profile Image" class="profile-img" />
+    </div>
+
+    <div class="right-panel">
+        <div class="content">
+            <h1><span class="dash">—</span> <span class="highlight">I'M FAIZ AL-AHMAD.</span><br /><span class="title-white">AI / ML ENGINEER</span></h1>
+            <p>
+            I'm an Indian based web designer & front-end developer focused on crafting clean & user-friendly experiences,
+            I am passionate about building excellent software that improves the lives of those around me.
+            </p>
+            <button id="openModal" class="more-btn">
+                <span class="text">MORE ABOUT ME</span>
+                <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+            </button>
+        </div>
+
+        <!-- Light/Dark Mode Toggle 
+        <div class="theme-toggle" id="themeToggle">
+            <i class="fas fa-sun"></i>
+        </div> -->
+
+        <!-- side buttons 
+        <div class="sidebar">
+            <div class="sidebar-button sidebar-button1" id="homeBtn">
+                <i class="bi bi-house-door-fill icon"></i>
+                <span class="label">Home</span>
+            </div>
+            <div class="sidebar-button">
+                <i class="bi bi-person-fill icon"></i>
+                <span class="label">Profile</span>
+            </div>
+            <div class="sidebar-button" id="work-btn">
+                <i class="bi bi-briefcase-fill icon"></i>
+                <span class="label">Work</span>
+            </div>
+            <div class="sidebar-button">
+                <i class="bi bi-envelope-fill icon"></i>
+                <span class="label">Mail</span>
+            </div>
+            <div class="sidebar-button">
+                <i class="bi bi-chat-dots-fill icon"></i>
+                <span class="label">Chat</span>
+            </div>
+        </div> -->
+    </div>
+  </div>
+
+    <!-- 'More about me' button action -->
+    <!-- Modal Section -->
+    <div id="resumeModal" class="modal-container modal-hidden">
+        <div class="modal-close-btn close-btn">&times;</div>
+            <div class="modal-content" id="resumeContent"> <!-- resumeContent id is used to fetch in PROFILE button -->
+                <div class="foreground-text">
+                    <span class="white">ABOUT</span> <span class="yellow">ME</span>
+                </div>
+                <div class="background-text">RESUME</div>
+                <!-- Modal detail -->
+                <div class="modal-scroll-content">
+                    <div class="personal-section">
+                        <div class="left-info">
+                            <h2>PERSONAL INFOS</h2>
+                            <div class="info-columns">
+                                <div class="info-col">
+                                    <p>First Name: <strong>Faiz</strong></p>
+                                    <p>Age: <strong>21 Years</strong></p>
+                                    <p>Freelance: <span class="available">Available</span></p>
+                                    <p>Phone: <a href="tel:+21621184010">+919060268704</a></p>
+                                    <p>Insta: <strong>faiz.al.ahmad</strong></p>
+                                </div>
+                                <div class="info-col">
+                                    <p>Last Name: <strong>Al-Ahmad</strong></p>
+                                    <p>Nationality: <strong>Indian</strong></p>
+                                    <p>Address: <strong>Patna, India</strong></p>
+                                    <p>Email: <a href="mailto:you@mail.com">ahmad4884faiz@gmail.com</a></p>
+                                    <p>Languages: <strong>Hindi, English, Urdu</strong></p>
+                                </div>
+                            </div>
+
+                            <div class="cv-button-container">
+                                <button class="download-cv">
+                                    DOWNLOAD CV <span class="download-icon"><i class="fa fa-download"></i></span>
+                                </button>
+                            </div>
+
+                        </div>
+                        <div class="right-stats">
+                            <div class="stat-box"><h1><span class="yellow-text">12+</span><br><span>YEARS OF EXPERIENCE</span></h1></div>
+                            <div class="stat-box"><h1><span class="yellow-text">97+</span><br><span>COMPLETED PROJECTS</span></h1></div>
+                            <div class="stat-box"><h1><span class="yellow-text">81+</span><br><span>HAPPY CUSTOMERS</span></h1></div>
+                            <div class="stat-box"><h1><span class="yellow-text">53+</span><br><span>AWARDS WON</span></h1></div>
+                        </div>
+                    </div> <!-- detail ends here -->
+                </div>
+
+                <!-- My skills part here -->
+                <div class="skills-section">
+                    <h2 class="skills-heading">MY SKILLS</h2>
+                    <div class="skills-grid">
+                        <div class="skill">
+                            <div class="progress-circle" data-percentage="25"><span class="skill-percent">25%</span></div>
+                            <p>HTML</p>
+                        </div>
+                        <div class="skill">
+                            <div class="progress-circle" data-percentage="89"><span class="skill-percent">89%</span></div>
+                            <p>JAVASCRIPT</p>
+                        </div>
+                        <div class="skill">
+                            <div class="progress-circle" data-percentage="70"><span class="skill-percent">70%</span></div>
+                            <p>CSS</p>
+                        </div>
+                        <div class="skill">
+                            <div class="progress-circle" data-percentage="66"><span class="skill-percent">66%</span></div>
+                            <p>PHP</p>
+                        </div>
+                        <div class="skill">
+                            <div class="progress-circle" data-percentage="95"><span class="skill-percent">95%</span></div>
+                            <p>WORDPRESS</p>
+                        </div>
+                        <div class="skill">
+                            <div class="progress-circle" data-percentage="50"><span class="skill-percent">50%</span></div>
+                            <p>JQUERY</p>
+                        </div>
+                        <div class="skill">
+                            <div class="progress-circle" data-percentage="65"><span class="skill-percent">65%</span></div>
+                            <p>ANGULAR</p>
+                        </div>
+                        <div class="skill">
+                            <div class="progress-circle" data-percentage="45"><span class="skill-percent">45%</span></div>
+                            <p>REACT</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience and Education part here -->
+                <div class="experience-education">
+                    <h2 class="section-title">EXPERIENCE & EDUCATION</h2>
+                    <div class="timeline">
+                        <!-- LEFT SIDE EXPERIENCE -->
+                        <div class="timeline-column">
+                        <div class="timeline-item">
+                            <div class="timeline-icon"><i class="fa fa-briefcase"></i></div>
+                            <span class="timeline-date">2018 - PRESENT</span>
+                            <h3 class="timeline-title">WEB DEVELOPER <span>– ENVATO</span></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon"><i class="fa fa-briefcase"></i></div>
+                            <span class="timeline-date">2013 - 2018</span>
+                            <h3 class="timeline-title">UI/UX DESIGNER <span>– THEMEFOREST</span></h3>
+                            <p>Lorem incididunt dolor sit amet, consectetur eiusmod dunt doldunt dol elit, tempor incididunt</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon"><i class="fa fa-briefcase"></i></div>
+                            <span class="timeline-date">2005 - 2013</span>
+                            <h3 class="timeline-title">CONSULTANT <span>– VIDEOHIVE</span></h3>
+                            <p>Lorem ipsum dolor sit amet, tempor incididunt ut laboreconsectetur elit, sed do eiusmod tempor duntt</p>
+                        </div>
+                        </div>
+
+                        <!-- RIGHT SIDE EDUCATION -->
+                        <div class="timeline-column">
+                        <div class="timeline-item">
+                            <div class="timeline-icon"><i class="fa fa-briefcase"></i></div>
+                            <span class="timeline-date">2015</span>
+                            <h3 class="timeline-title">ENGINEERING DEGREE <span>– OXFORD UNIVERSITY</span></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon"><i class="fa fa-briefcase"></i></div>
+                            <span class="timeline-date">2012</span>
+                            <h3 class="timeline-title">MASTER DEGREE <span>– KIEV UNIVERSITY</span></h3>
+                            <p>Lorem incididunt dolor sit amet, consectetur eiusmod dunt doldunt dol elit, tempor incididunt</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon"><i class="fa fa-briefcase"></i></div>
+                            <span class="timeline-date">2009</span>
+                            <h3 class="timeline-title">BACHELOR DEGREE <span>– TUNIS HIGH SCHOOL</span></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur incididunt ut laboreconsectetur elit, sed do eiusmod tempor duntt</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+  </section>
+
+    <!-- My Portfolio sidebar button here -->
+    <!-- PORTFOLIO FULL PAGE SECTION -->
+    <section id="portfolio" class="portfolio-section hidden">
+        <div class="portfolio-header">
+            <h2><span class="white-work">MY</span> <span class="yellow-work">PORTFOLIO</span></h2>
+            <div class="background-text-work">WORKS</div>
+        </div>
+
+        <div class="portfolio-filters">
+            <button class="filter-btn active" data-filter="all">ALL</button>
+            <button class="filter-btn" data-filter="logo">LOGO</button>
+            <button class="filter-btn" data-filter="video">VIDEO</button>
+            <button class="filter-btn" data-filter="graphic">GRAPHIC DESIGN</button>
+            <button class="filter-btn" data-filter="mockup">MOCKUP</button>
+        </div>
+
+        <div class="portfolio-gallery">
+            <div class="portfolio-item filter-item video" data-title="Mockup Project" data-client="Envato" data-language="HTML, CSS, JS" data-preview="https://www.envato.com" data-img="C:\Users\FAIZ AHMAD\Music\Finance\work1.jpg" id="opengallery">
+                <img src="C:\Users\FAIZ AHMAD\Music\Finance\work1.jpg" alt="img1">
+                    <div class="overlay">
+                        <span class="overlay-text">MOCKUP PROJECT</span>
+                    </div>
+            </div>
+
+            <div class="portfolio-item filter-item logo" data-title="YouTube Project" data-client="Videohive" data-language="Adobe After Effects" data-preview="https://www.videohive.com" data-img="C:\Users\FAIZ AHMAD\Music\Finance\work2.jpg" id="opengallery">
+                <img src="C:\Users\FAIZ AHMAD\Music\Finance\work2.jpg" alt="img2" class="filter-item logo">
+                    <div class="overlay">
+                        <span class="overlay-text">YOUTUBE PROJECT</span>
+                    </div>
+            </div>
+            
+            <div class="portfolio-item filter-item graphic" data-title="Slider Project" data-client="Themeforest" data-language="HTML, CSS, JS" data-preview="https://www.envato.com" data-img="C:\Users\FAIZ AHMAD\Music\Finance\work3.jpg" id="opengallery">
+                <img src="C:\Users\FAIZ AHMAD\Music\Finance\work3.jpg" alt="img3" class="filter-item graphic">
+                    <div class="overlay">
+                        <span class="overlay-text">SLIDER PROJECT</span>
+                    </div>
+            </div>
+
+            <div class="portfolio-item filter-item logo" data-title="Local Project" data-client="Videohive" data-language="Adobe After Effects" data-preview="https://www.videohive.com" data-img="C:\Users\FAIZ AHMAD\Music\Finance\work4.jpg" id="opengallery">
+                <img src="C:\Users\FAIZ AHMAD\Music\Finance\work4.jpg" alt="img4" class="filter-item logo">
+                    <div class="overlay">
+                        <span class="overlay-text">LOCAL PROJECT</span>
+                    </div>
+            </div>
+
+            <div class="portfolio-item filter-item video" data-title="SASS Project" data-client="Themeforest" data-language="HTML, CSS, ReactJS" data-preview="https://www.envato.com" data-img="C:\Users\FAIZ AHMAD\Music\Finance\work5.jpg" id="opengallery">
+                <img src="C:\Users\FAIZ AHMAD\Music\Finance\work5.jpg" alt="img5" class="filter-item video">
+                    <div class="overlay">
+                        <span class="overlay-text">SASS PROJECT</span>
+                    </div>
+            </div>
+
+            <div class="portfolio-item filter-item logo" data-title="Mockup Project" data-client="Themeforest" data-language="HTML, CSS, JS" data-preview="https://www.pexels.com" data-img="C:\Users\FAIZ AHMAD\Music\Finance\work6.jpg" id="opengallery">
+                <img src="C:\Users\FAIZ AHMAD\Music\Finance\work6.jpg" alt="img6" class="filter-item logo">
+                    <div class="overlay">
+                        <span class="overlay-text">MOCKUP PROJECT</span>
+                    </div>
+            </div>
+
+            <div class="portfolio-item filter-item graphic" data-title="Facebook Project" data-client="Facebook" data-language="HTML, CSS, JS" data-preview="https://www.facebook.com" data-img="C:\Users\FAIZ AHMAD\Music\Finance\work7.jpg" id="opengallery">
+                <img src="C:\Users\FAIZ AHMAD\Music\Finance\work7.jpg" alt="img6" class="filter-item graphic">
+                    <div class="overlay">
+                        <span class="overlay-text">FACEBOOK PROJECT</span>
+                    </div>
+            </div>
+
+            <div class="portfolio-item filter-item mockup" data-title="Dribble Project" data-client="Dribble" data-language="HTML, CSS, JS" data-preview="https://www.dribble.com" data-img="C:\Users\FAIZ AHMAD\Music\Finance\work8.jpg" id="opengallery">
+                <img src="C:\Users\FAIZ AHMAD\Music\Finance\work8.jpg" alt="img6" class="filter-item mockup">
+                    <div class="overlay">
+                        <span class="overlay-text">DRIBBLE PROJECT</span>
+                    </div>
+            </div>
+
+            <div class="portfolio-item filter-item mockup" data-title="Behence Project" data-client="Behance" data-language="HTML, CSS, JS" data-preview="https://www.behance.com" data-img="C:\Users\FAIZ AHMAD\Music\Finance\work9.jpg" id="opengallery">
+                <img src="C:\Users\FAIZ AHMAD\Music\Finance\work9.jpg" alt="img6" class="filter-item mockup">
+                    <div class="overlay">
+                        <span class="overlay-text">BEHENCE PROJECT</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal of portfolio gallery image here -->
+        <div id="galleryModal" class="modal-container2" style="display: none;">
+        <div class="modal-close-btn2 close-btn2">&times;</div>
+            <div class="modal-content">
+                <div class="foreground-text">
+                    <span class="white" id="modalTitle"></span> <span class="yellow" id="modalSubtitle"></span>
+                </div>
+                <div class="background-text" id="modalBG"></div>
+                <div class="project-info">
+                    <div class="project-left">
+                        <p><i class="bi bi-file-earmark-text"></i> Project: <strong id="modalProject">Website</strong></p>
+                        <p><i class="bi bi-code-slash"></i> Language : <strong id="modalLang">HTML, CSS, Javascript</strong></p>
+                    </div>
+                    <div class="project-right">
+                        <p><i class="bi bi-person-fill"></i> Client : <strong id="modalClient">Envato</strong></p>
+                        <p><i class="bi bi-box-arrow-up-right"></i> Preview : <a href="https://www.envato.com"  id="modalPreview" target="_blank">www.envato.com</a></p>
+                    </div>
+                </div>
+                <div class="project-image">
+                    <img id="modalImage" src="" alt="Full Image" style="border-radius: 10px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sidebar buttons and theme change part here - GLOBALLY AVAILABLE -->
+    <!-- Light/Dark Mode Toggle -->
+        <div class="theme-toggle" id="themeToggle">
+            <i class="fas fa-sun"></i>
+        </div>
+
+        <!-- side buttons -->
+        <div class="sidebar">
+            <div class="sidebar-button active-sidebar" id="home-btn">
+                <i class="bi bi-house-door-fill icon"></i>
+                <span class="label">HOME</span>
+            </div>
+            <div class="sidebar-button" id="profile-btn">
+                <i class="bi bi-person-fill icon"></i>
+                <span class="label">PROFILE</span>
+            </div>
+            <div class="sidebar-button" id="work-btn">
+                <i class="bi bi-briefcase-fill icon"></i>
+                <span class="label">WORK</span>
+            </div>
+            <div class="sidebar-button" id="conta-btn">
+                <i class="bi bi-envelope-fill icon"></i>
+                <span class="label">MAIL</span>
+            </div>
+            <div class="sidebar-button" id="blog-btn">
+                <i class="bi bi-chat-dots-fill icon"></i>
+                <span class="label">BLOG</span>
+            </div>
+        </div>
+        <!-- UPTO THIS LINE -->
+
+        <!-- My BLOG sidebar button part here -->
+        <section id="blogging" class="blogging-section hidden">
+            <div class="blogging-header">
+                <h2><span class="white-blog">MY</span> <span class="yellow-blog">BLOGS</span></h2>
+                <div class="background-text-blog">POSTS</div>
+            </div>
+
+            <!-- Blog cards parts here -->
+            <div class="blog-card-container">
+                <div class="blog-card" data-title="How to Own Your Audience by Creating an Email List" data-author="Faiz" data-date="21 April 2025" data-tags="wordpress, business, economy, design" data-img="C:\Users\FAIZ AHMAD\Music\Finance\blog1.jpg" data-content='<p style="text-align: justify; padding: 20px 63px 0 63px;">Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack bonnet arse over tit burke bugger all mate bodge. cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Suspendisse interdum consectetur libero id faucibu nisl. Lacus vel facilisis volutpat est velit egestas.</p><blockquote style="display: flex; align-items: flex-start; padding: 0 60px;"><i class="bi bi-quote text-yellow" style="font-size: 100px; margin-right: 15px; margin-top: 0;"></i><p style="text-align: justify; margin: 0;"><i>Most photographers find it hard to see interesting pictures in places in which they are most familiar. A trip somewhere new seems always exactly what our photography needed, as shooting away from home consistently inspires us to new artistic heights.</i></p></blockquote><p style="text-align: justify; padding: 20px 63px 0 63px;">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Riosum dolor sit. amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'>
+                    <img src="C:\Users\FAIZ AHMAD\Music\Finance\blog1.jpg" alt="Blog 1">
+                    <div class="blog-content">
+                        <h3>How to Own Your Audience by Creating an Email List</h3>
+                        <p>Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack b</p>
+                    </div>
+                </div>
+
+                <div class="blog-card" data-title="Top 10 Toolkits for Deep Learning in 2022" data-author="Faiz" data-date="25 April 2025" data-tags="wordpress, business, economy, design" data-img="C:\Users\FAIZ AHMAD\Music\Finance\blog2.jpg" data-content='<p style="text-align: justify; padding: 20px 63px 0 63px;">Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack bonnet arse over tit burke bugger all mate bodge. cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Suspendisse interdum consectetur libero id faucibu nisl. Lacus vel facilisis volutpat est velit egestas.</p><blockquote style="display: flex; align-items: flex-start; padding: 0 60px;"><i class="bi bi-quote text-yellow" style="font-size: 100px; margin-right: 15px; margin-top: 0;"></i><p style="text-align: justify; margin: 0;"><i>Most photographers find it hard to see interesting pictures in places in which they are most familiar. A trip somewhere new seems always exactly what our photography needed, as shooting away from home consistently inspires us to new artistic heights.</i></p></blockquote><p style="text-align: justify; padding: 20px 63px 0 63px;">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Riosum dolor sit. amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'>
+                    <img src="C:\Users\FAIZ AHMAD\Music\Finance\blog2.jpg" alt="Blog 2">
+                    <div class="blog-content">
+                        <h3>Top 10 Toolkits for Deep Learning in 2022</h3>
+                        <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</p>
+                    </div>
+                </div>
+
+                <div class="blog-card" data-title="Everything You Need to Know About Web Accessibility" data-author="Faiz" data-date="29 April 2025" data-tags="wordpress, business, economy, design" data-img="C:\Users\FAIZ AHMAD\Music\Finance\blog3.jpg" data-content='<p style="text-align: justify; padding: 20px 63px 0 63px;">Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack bonnet arse over tit burke bugger all mate bodge. cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Suspendisse interdum consectetur libero id faucibu nisl. Lacus vel facilisis volutpat est velit egestas.</p><blockquote style="display: flex; align-items: flex-start; padding: 0 60px;"><i class="bi bi-quote text-yellow" style="font-size: 100px; margin-right: 15px; margin-top: 0;"></i><p style="text-align: justify; margin: 0;"><i>Most photographers find it hard to see interesting pictures in places in which they are most familiar. A trip somewhere new seems always exactly what our photography needed, as shooting away from home consistently inspires us to new artistic heights.</i></p></blockquote><p style="text-align: justify; padding: 20px 63px 0 63px;">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Riosum dolor sit. amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'>
+                    <img src="C:\Users\FAIZ AHMAD\Music\Finance\blog3.jpg" alt="Blog 3">
+                    <div class="blog-content">
+                        <h3>Everything You Need to Know About Web Accessibility</h3>
+                        <p>Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore ma</p>
+                    </div>
+                </div>
+
+                <div class="blog-card" data-title="How to Inject Humor & Comedy Into Your Brand" data-author="Faiz" data-date="4 May 2025" data-tags="wordpress, business, economy, design" data-img="C:\Users\FAIZ AHMAD\Music\Finance\blog4.jpg" data-content='<p style="text-align: justify; padding: 20px 63px 0 63px;">Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack bonnet arse over tit burke bugger all mate bodge. cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Suspendisse interdum consectetur libero id faucibu nisl. Lacus vel facilisis volutpat est velit egestas.</p><blockquote style="display: flex; align-items: flex-start; padding: 0 60px;"><i class="bi bi-quote text-yellow" style="font-size: 100px; margin-right: 15px; margin-top: 0;"></i><p style="text-align: justify; margin: 0;"><i>Most photographers find it hard to see interesting pictures in places in which they are most familiar. A trip somewhere new seems always exactly what our photography needed, as shooting away from home consistently inspires us to new artistic heights.</i></p></blockquote><p style="text-align: justify; padding: 20px 63px 0 63px;">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Riosum dolor sit. amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'>
+                    <img src="C:\Users\FAIZ AHMAD\Music\Finance\blog4.jpg" alt="Blog 4">
+                    <div class="blog-content">
+                        <h3>How to Inject Humor & Comedy Into Your Brand</h3>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</p>
+                    </div>
+                </div>
+
+                <div class="blog-card" data-title="Women in Web Design: How To Achieve Success" data-author="Faiz" data-date="10 May 2025" data-tags="wordpress, business, economy, design" data-img="C:\Users\FAIZ AHMAD\Music\Finance\blog5.jpg" data-content='<p style="text-align: justify; padding: 20px 63px 0 63px;">Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack bonnet arse over tit burke bugger all mate bodge. cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Suspendisse interdum consectetur libero id faucibu nisl. Lacus vel facilisis volutpat est velit egestas.</p><blockquote style="display: flex; align-items: flex-start; padding: 0 60px;"><i class="bi bi-quote text-yellow" style="font-size: 100px; margin-right: 15px; margin-top: 0;"></i><p style="text-align: justify; margin: 0;"><i>Most photographers find it hard to see interesting pictures in places in which they are most familiar. A trip somewhere new seems always exactly what our photography needed, as shooting away from home consistently inspires us to new artistic heights.</i></p></blockquote><p style="text-align: justify; padding: 20px 63px 0 63px;">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Riosum dolor sit. amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'>
+                    <img src="C:\Users\FAIZ AHMAD\Music\Finance\blog5.jpg" alt="Blog 5">
+                    <div class="blog-content">
+                        <h3>Women in Web Design: How To Achieve Success</h3>
+                        <p>Jorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                    </div>
+                </div>
+
+                <div class="blog-card" data-title="Evergreen versus topical content: An overview" data-author="Rio" data-date="21 April 2022" data-tags="wordpress, business, economy, design" data-img="C:\Users\FAIZ AHMAD\Music\Finance\blog6.jpg" data-content='<p style="text-align: justify; padding: 20px 63px 0 63px;">Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack bonnet arse over tit burke bugger all mate bodge. cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Suspendisse interdum consectetur libero id faucibu nisl. Lacus vel facilisis volutpat est velit egestas.</p><blockquote style="display: flex; align-items: flex-start; padding: 0 60px;"><i class="bi bi-quote text-yellow" style="font-size: 100px; margin-right: 15px; margin-top: 0;"></i><p style="text-align: justify; margin: 0;"><i>Most photographers find it hard to see interesting pictures in places in which they are most familiar. A trip somewhere new seems always exactly what our photography needed, as shooting away from home consistently inspires us to new artistic heights.</i></p></blockquote><p style="text-align: justify; padding: 20px 63px 0 63px;">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Riosum dolor sit. amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'>
+                    <img src="C:\Users\FAIZ AHMAD\Music\Finance\blog6.jpg" alt="Blog 6">
+                    <div class="blog-content">
+                        <h3>Evergreen versus topical content: An overview</h3>
+                        <p>Still ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog card modal HTML here -->
+            <div id="blogModal" class="blog-modal-container" style="display: none;">
+                <div class="blog-modal-close-btn close-blog-modal">&times;</div>
+                <div class="blog-modal-content">
+                    <div class="blog-modal-header">
+                        <h2><span class="white-blog">POST</span> <span class="yellow-blog">DETAILS</span></h2>
+                        <div class="blog-modal-bg">POSTS</div>
+                    </div>
+
+                    <div class="blog-post-meta">
+                        <p><i class="bi bi-person-fill"></i> <span id="blogAuthor">Author</span></p>
+                        <p><i class="bi bi-calendar-event"></i> <span id="blogDate">Date</span></p>
+                        <p><i class="bi bi-tags-fill"></i> <span id="blogTags">Tags</span></p>
+                    </div>
+
+                    <h3 id="blogTitle">Post Title</h3>
+
+                    <div class="blog-image">
+                        <img id="blogImage" src="" alt="Post Image">
+                    </div>
+                    <div class="blog-text-section" id="modalBlogContent"></div>
+                </div>
+            </div>
+
+        <!-- Contact Sidebar 4th button HTML here -->
+        <section id="contact" class="contact-section hidden">
+            <div class="contact-header">
+                <h2><span class="white-conta">GET IN</span> <span class="yellow-conta">TOUCH</span></h2>
+                <div class="background-text-conta">CONTACT</div>
+            </div>
+
+            <!-- Contact part further -->
+            <div class="contact-container">
+                <div class="contact-left">
+                    <h3 class="contact-title">DON'T BE SHY !</h3>
+                    <p class="contact-description">
+                        Feel free to get in touch with me. I am always open to discussing new projects,
+                        creative ideas or opportunities to be part of your visions.
+                    </p>
+
+                    <div class="contact-info">
+                        <div class="info-box">
+                            <i class="bi bi-map-fill text-yellow"></i>
+                            <div>
+                                <span class="info-title">ADDRESS POINT</span>
+                                <p class="info-value"><strong>N B Road, Patna City, Patna 800008</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="info-box">
+                            <i class="bi bi-envelope-open-fill text-yellow"></i>
+                            <div>
+                                <span class="info-title">MAIL ME</span>
+                                <p class="info-value"><strong>ahmad4884faiz@gmail.com</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="info-box">
+                            <i class="bi bi-telephone-fill text-yellow"></i>
+                            <div>
+                                <span class="info-title">CALL ME</span>
+                                <p class="info-value"><strong>+91 90602 68704</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/ahmad_al_faiz484/" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://x.com/FaizFaiz586918" target="_blank"><i class="bi bi-twitter"></i></a>
+                        <a href="https://www.youtube.com" target="_blank"><i class="bi bi-youtube"></i></a>
+                        <a href="https://www.linkedin.com/in/faiz-ahmad-865613270/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://in.pinterest.com/ahmad484faiz/_profile/" target="_blank"><i class="bi bi-pinterest"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-right">
+                    <form id="contact-form" class="contact-form">
+                        <div class="input-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <input type="text" name="subject" placeholder="Your Subject" required>
+                        <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+
+                        <div class="send-btn-wrapper">
+                            <button type="submit" class="send-btn">
+                                SEND MESSAGE
+                                <span class="send-icon"><i class="bi bi-send-fill"></i></span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROFILE button of Sidebar section -->
+        <section id="profile" class="profile-section hidden">
+            <!-- <div class="profile-header">
+                <h2><span class="white-prof">ABOUT</span> <span class="yellow-prof">ME</span></h2>
+                <div class="background-text-prof">RESUME</div>
+            </div> -->
+
+            <!-- Placeholder for dynamic injection -->
+            <div id="profileContent"></div>
+        </section>
+
+        <!-- HTML for Succesfully message sent notification -->
+        <div id="toast" class="toast hidden">Message sent successfully!</div>
+        
+    <!-- Javascript for Mode switching Button -->
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const icon = themeToggle.querySelector('i');
+
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+            
+            // Toggle icon between sun and moon
+            if (document.body.classList.contains('light-theme')) {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+            } else {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+            }
+        });
+    </script>
+
+    <!-- 'More about me' button JavaScript --
+    <script>
+        const modal = document.getElementById("resumeModal");
+        const openBtn = document.getElementById("openModal");
+        const closeBtn = document.querySelector(".close-btn"); // Add this button in modal if needed
+
+        openBtn.onclick = function () {
+            modal.style.display = "flex";
+        };
+
+        if (closeBtn) {
+            closeBtn.onclick = function () {
+            modal.style.display = "none";
+            };
+        }
+
+        window.onclick = function (e) {
+            if (e.target === modal) {
+            modal.style.display = "none";
+            }
+        };
+    </script> -->
+
+    <!-- JS to open 'MORE ABOUT ME' button modal -->
+    <script>
+        const modal = document.getElementById("resumeModal");
+        const openBtn = document.getElementById("openModal");
+        const closeBtn = document.querySelector(".close-btn");
+
+        openBtn.onclick = function () {
+            modal.classList.remove("modal-hidden"); // ✅ show the modal
+        };
+
+        if (closeBtn) {
+            closeBtn.onclick = function () {
+                modal.classList.add("modal-hidden"); // ✅ hide the modal
+            };
+        }
+
+        window.onclick = function (e) {
+            if (e.target === modal) {
+                modal.classList.add("modal-hidden"); // ✅ hide if clicked outside
+            }
+        };
+    </script>
+
+    <!-- JS for 'MORE ABOUT ME' button modal content fetch in PROFILE page -->
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const modal = document.getElementById("resumeModal");
+        const openBtn = document.getElementById("openModal");
+        const closeBtn = document.querySelector(".close-btn");
+
+        const profileBtn = document.getElementById("profile-btn");
+        const profileSection = document.getElementById("profile");
+        const profileContent = document.getElementById("profileContent");
+        const resumeContent = document.getElementById("resumeContent");
+
+        
+
+        //added part
+        if (openBtn) {
+            openBtn.addEventListener("click", () => {
+                modal.style.display = "flex";
+            });
+        }
+
+        // Attach modal close button
+        if (closeBtn) {
+            closeBtn.addEventListener("click", () => {
+                modal.style.display = "none";
+            });
+        }
+
+        // Close modal if clicking outside content
+        window.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        }); //upto this
+
+        // ✅ Sidebar PROFILE button behavior
+        profileBtn.addEventListener("click", () => {
+        // Hide all other sections
+        document.querySelectorAll("section").forEach(sec => sec.classList.add("hidden"));
+
+        // Show profile section
+        profileSection.classList.remove("hidden");
+        profileSection.classList.add("active");
+
+        // ✅ Clone content instead of moving it
+        if (profileContent.innerHTML.trim() === "") {
+            const clone = resumeContent.cloneNode(true);
+            profileContent.appendChild(clone);
+        }
+        });
+    });
+    </script>
+
+    <!-- My Skills Javascript part here -->
+    <script>
+    document.querySelectorAll('.progress-circle').forEach(circle => {
+        const percent = circle.getAttribute('data-percentage');
+        circle.style.background = `conic-gradient(#f8aa00 0% ${percent}%, #1b1b1b ${percent}% 100%)`;
+    });
+    </script>
+
+    <!-- My Portfolio sidebar button JavaScript here -->
+    <script>
+        const workBtn = document.getElementById("work-btn");
+        const portfolioSection = document.getElementById("portfolio");
+
+        workBtn.addEventListener("click", () => {
+            // Hide all other sections
+            document.querySelectorAll("section").forEach(sec => {
+                sec.classList.remove("active");
+                sec.classList.add("hidden");
+            });
+
+
+            // Show only the portfolio section
+            portfolioSection.classList.remove("hidden");
+            portfolioSection.classList.add("active");
+
+            // Remove active-sidebar from all sidebar buttons
+            document.querySelectorAll('.sidebar-button').forEach(btn => {
+                btn.classList.remove('active-sidebar');
+            });
+
+            // Add active-sidebar to the clicked one
+            this.classList.add('active-sidebar');
+        });
+    </script>
+
+    <!-- Home button JS functionality here -->
+    <script>
+        const homeBtn = document.getElementById("home-btn");
+        const homeSection = document.getElementById("home");
+
+        homeBtn.addEventListener("click", () => {
+            // Hide all other sections
+            document.querySelectorAll("section").forEach(sec => {
+                sec.classList.remove("active");
+                sec.classList.add("hidden");
+            });
+
+            // Show only the HOME section
+            homeSection.classList.remove("hidden");
+            homeSection.classList.add("active");
+
+            // Remove active-sidebar from all sidebar buttons
+            document.querySelectorAll('.sidebar-button').forEach(btn => {
+                btn.classList.remove('active-sidebar');
+            });
+
+            // Add active-sidebar to the clicked one
+            this.classList.add('active-sidebar');
+        });
+    </script>
+
+
+    <!-- Portfolio gallery filter JS here -->
+    <script>
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const filterItems = document.querySelectorAll('.filter-item');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filter = btn.getAttribute('data-filter');
+
+            filterItems.forEach(item => {
+                if (filter === 'all' || item.classList.contains(filter)) {
+                item.style.display = 'block';
+                } else {
+                item.style.display = 'none';
+                }
+            });
+            });
+        });
+    </script>
+
+    <!-- Modal JS of portfolio gallery image here-->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const modal = document.getElementById("galleryModal");
+            const modalTitle = document.getElementById("modalTitle");
+            const modalSubtitle = document.getElementById("modalSubtitle");
+            const modalBG = document.getElementById("modalBG");
+            const modalProject = document.getElementById("modalProject");
+            const modalClient = document.getElementById("modalClient");
+            const modalLang = document.getElementById("modalLang");
+            const modalPreview = document.getElementById("modalPreview");
+            const modalImage = document.getElementById("modalImage");
+            const closeBtn = document.querySelector(".close-btn2");
+
+            document.querySelectorAll(".portfolio-item").forEach(item => {
+            item.addEventListener("click", () => {
+                const fullTitle = item.dataset.title || "Project";
+                const splitWords = fullTitle.split(" ");
+
+                modalTitle.textContent = splitWords.slice(0, -1).join(" ").toUpperCase();
+                modalSubtitle.textContent = splitWords.slice(-1)[0].toUpperCase();
+                modalBG.textContent = fullTitle.toUpperCase();
+
+                modalProject.textContent = item.dataset.title;
+                modalClient.textContent = item.dataset.client;
+                modalLang.textContent = item.dataset.language;
+                modalPreview.href = item.dataset.preview;
+                modalPreview.textContent = new URL(item.dataset.preview).hostname;
+                modalImage.src = item.dataset.img;
+
+                modal.style.display = "flex";
+            });
+            });
+
+            closeBtn.onclick = () => modal.style.display = "none";
+            window.onclick = (e) => {
+            if (e.target === modal) modal.style.display = "none";
+            };
+        });
+    </script>
+
+    <!-- My Blog sidebar button JavaScript here -->
+    <script>
+        const blogBtn = document.getElementById("blog-btn");
+        const bloggingSection = document.getElementById("blogging");
+
+        blogBtn.addEventListener("click", () => {
+            // Hide all other sections
+            document.querySelectorAll("section").forEach(sec => {
+                sec.classList.remove("active");
+                sec.classList.add("hidden");
+            });
+
+
+            // Show only the portfolio section
+            bloggingSection.classList.remove("hidden");
+            bloggingSection.classList.add("active");
+
+            // Remove active-sidebar from all sidebar buttons
+            document.querySelectorAll('.sidebar-button').forEach(btn => {
+                btn.classList.remove('active-sidebar');
+            });
+
+            // Add active-sidebar to the clicked one
+            this.classList.add('active-sidebar');
+        });
+    </script>
+
+    <!-- Blog card modal JS here -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const blogModal = document.getElementById("blogModal");
+            const blogTitle = document.getElementById("blogTitle");
+            const blogAuthor = document.getElementById("blogAuthor");
+            const blogDate = document.getElementById("blogDate");
+            const blogTags = document.getElementById("blogTags");
+            const blogImage = document.getElementById("blogImage");
+            const blogContent = document.getElementById("modalBlogContent");
+            const closeBtn = document.querySelector(".close-blog-modal");
+
+            // Listen to each blog card
+            document.querySelectorAll(".blog-card").forEach(card => {
+                card.addEventListener("click", () => {
+                blogTitle.textContent = card.dataset.title;
+                blogAuthor.textContent = card.dataset.author;
+                blogDate.textContent = card.dataset.date;
+                blogTags.textContent = card.dataset.tags;
+                blogImage.src = card.dataset.img;
+
+                blogContent.innerHTML = card.dataset.content || "";
+
+                blogModal.style.display = "flex";
+                });
+            });
+
+            // Close modal on click of close button
+            closeBtn.addEventListener("click", () => {
+                blogModal.style.display = "none";
+            });
+
+            // Close modal if user clicks outside modal content
+            window.addEventListener("click", (e) => {
+                if (e.target === blogModal) {
+                blogModal.style.display = "none";
+                }
+            });
+        });
+    </script>
+
+    <!-- CONTACT Sidebar 4th button JS here -->
+    <script>
+        const contaBtn = document.getElementById("conta-btn");
+        const contactSection = document.getElementById("contact");
+
+        contaBtn.addEventListener("click", () => {
+        // Hide all other sections
+        document.querySelectorAll("section").forEach(sec => {
+            sec.classList.remove("active");
+            sec.classList.add("hidden");
+        });
+
+
+        // Show only the portfolio section
+        contactSection.classList.remove("hidden");
+        contactSection.classList.add("active");
+
+        // Remove active-sidebar from all sidebar buttons
+        document.querySelectorAll('.sidebar-button').forEach(btn => {
+            btn.classList.remove('active-sidebar');
+        });
+
+        // Add active-sidebar to the clicked one
+        this.classList.add('active-sidebar');
+        }); 
+    </script>
+
+    <!-- PROFILE button of sidebar section JS -->
+    <script>
+        const profBtn = document.getElementById("prof-btn");
+        const profileSection = document.getElementById("profile");
+
+        profBtn.addEventListener("click", () => {
+        // Hide all other sections
+        document.querySelectorAll("section").forEach(sec => {
+            sec.classList.remove("active");
+            sec.classList.add("hidden");
+        });
+
+
+        // Show only the portfolio section
+        profileSection.classList.remove("hidden");
+        profileSection.classList.add("active");
+
+        // Remove active-sidebar from all sidebar buttons
+        document.querySelectorAll('.sidebar-button').forEach(btn => {
+            btn.classList.remove('active-sidebar');
+        });
+
+        // Add active-sidebar to the clicked one
+        this.classList.add('active-sidebar');
+        }); 
+    </script>
+
+    <!-- Working JS for all Sidebar Button -->
+    <script>
+        const buttons = [
+            { btnId: "home-btn", sectionId: "homepage" },
+            { btnId: "profile-btn", sectionId: "profile" },
+            { btnId: "work-btn", sectionId: "portfolio" },
+            { btnId: "conta-btn", sectionId: "contact" },
+            { btnId: "blog-btn", sectionId: "blogging" }
+        ];
+
+        buttons.forEach(({ btnId, sectionId }) => {
+            const btn = document.getElementById(btnId);
+            const section = document.getElementById(sectionId);
+
+            btn.addEventListener("click", () => {
+                // Hide all sections
+                document.querySelectorAll("section").forEach(sec => {
+                    sec.classList.remove("active");
+                    sec.classList.add("hidden");
+                });
+
+                // Remove yellow class from all buttons
+                document.querySelectorAll(".sidebar-button").forEach(button => {
+                    button.classList.remove("active-sidebar");
+                });
+
+                // Show the section and highlight button
+                section.classList.remove("hidden");
+                section.classList.add("active");
+                btn.classList.add("active-sidebar");
+            });
+        });
+    </script>
+
+    <!-- JS to hide Formspree interface after sending message -->
+    <script>
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const formData = new FormData(form);
+
+  fetch("https://formspree.io/f/mjkrjanb", {
+    method: "POST",
+    body: formData,
+    headers: { 'Accept': 'application/json' }
+  }).then(response => {
+    if (response.ok) {
+      showToast("Message sent successfully!");
+      form.reset();
+    } else {
+      showToast("Something went wrong. Try again.");
+    }
+  }).catch(error => {
+    showToast("Network error. Please try later.");
+  });
+});
+
+function showToast(msg) {
+  const toast = document.getElementById("toast");
+  toast.textContent = msg;
+  toast.classList.remove("hidden");
+  toast.classList.add("show");
+
+  setTimeout(() => {
+    toast.classList.remove("show");
+    toast.classList.add("hidden");
+  }, 3000);
+}
+</script>
+
+
+</body>
+</html>
