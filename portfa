@@ -1652,7 +1652,7 @@ section.hidden {
   <div class="container">
     <div class="left-panel">
       <div class="yellow-corner"></div>
-      <img src="C:\Users\FAIZ AHMAD\OneDrive\Pictures\Camera Roll\faiz_eid.jpg" alt="Profile Image" class="profile-img" />
+      <img src="https://images.pexels.com/photos/32764049/pexels-photo-32764049.jpeg" alt="Profile Image" class="profile-img" />
     </div>
 
     <div class="right-panel">
@@ -1856,64 +1856,64 @@ section.hidden {
         </div>
 
         <div class="portfolio-gallery">
-            <div class="portfolio-item filter-item video" data-title="Mockup Project" data-client="Envato" data-language="HTML, CSS, JS" data-preview="https://www.envato.com" data-img="C:\Users\FAIZ AHMAD\Music\Finance\work1.jpg" id="opengallery">
-                <img src="C:\Users\FAIZ AHMAD\Music\Finance\work1.jpg" alt="img1">
+            <div class="portfolio-item filter-item video" data-title="Mockup Project" data-client="Envato" data-language="HTML, CSS, JS" data-preview="https://www.envato.com" data-img="https://images.pexels.com/photos/32764120/pexels-photo-32764120.jpeg" id="opengallery">
+                <img src="https://images.pexels.com/photos/32764120/pexels-photo-32764120.jpeg" alt="img1">
                     <div class="overlay">
                         <span class="overlay-text">MOCKUP PROJECT</span>
                     </div>
             </div>
 
-            <div class="portfolio-item filter-item logo" data-title="YouTube Project" data-client="Videohive" data-language="Adobe After Effects" data-preview="https://www.videohive.com" data-img="C:\Users\FAIZ AHMAD\Music\Finance\work2.jpg" id="opengallery">
-                <img src="C:\Users\FAIZ AHMAD\Music\Finance\work2.jpg" alt="img2" class="filter-item logo">
+            <div class="portfolio-item filter-item logo" data-title="YouTube Project" data-client="Videohive" data-language="Adobe After Effects" data-preview="https://www.videohive.com" data-img="https://images.pexels.com/photos/32764128/pexels-photo-32764128.jpeg" id="opengallery">
+                <img src="https://images.pexels.com/photos/32764128/pexels-photo-32764128.jpeg" alt="img2" class="filter-item logo">
                     <div class="overlay">
                         <span class="overlay-text">YOUTUBE PROJECT</span>
                     </div>
             </div>
             
-            <div class="portfolio-item filter-item graphic" data-title="Slider Project" data-client="Themeforest" data-language="HTML, CSS, JS" data-preview="https://www.envato.com" data-img="C:\Users\FAIZ AHMAD\Music\Finance\work3.jpg" id="opengallery">
-                <img src="C:\Users\FAIZ AHMAD\Music\Finance\work3.jpg" alt="img3" class="filter-item graphic">
+            <div class="portfolio-item filter-item graphic" data-title="Slider Project" data-client="Themeforest" data-language="HTML, CSS, JS" data-preview="https://www.envato.com" data-img="https://images.pexels.com/photos/32764134/pexels-photo-32764134.jpeg" id="opengallery">
+                <img src="https://images.pexels.com/photos/32764134/pexels-photo-32764134.jpeg" alt="img3" class="filter-item graphic">
                     <div class="overlay">
                         <span class="overlay-text">SLIDER PROJECT</span>
                     </div>
             </div>
 
-            <div class="portfolio-item filter-item logo" data-title="Local Project" data-client="Videohive" data-language="Adobe After Effects" data-preview="https://www.videohive.com" data-img="C:\Users\FAIZ AHMAD\Music\Finance\work4.jpg" id="opengallery">
-                <img src="C:\Users\FAIZ AHMAD\Music\Finance\work4.jpg" alt="img4" class="filter-item logo">
+            <div class="portfolio-item filter-item logo" data-title="Local Project" data-client="Videohive" data-language="Adobe After Effects" data-preview="https://www.videohive.com" data-img="https://images.pexels.com/photos/32764154/pexels-photo-32764154.jpeg" id="opengallery">
+                <img src="https://images.pexels.com/photos/32764154/pexels-photo-32764154.jpeg" alt="img4" class="filter-item logo">
                     <div class="overlay">
                         <span class="overlay-text">LOCAL PROJECT</span>
                     </div>
             </div>
 
-            <div class="portfolio-item filter-item video" data-title="SASS Project" data-client="Themeforest" data-language="HTML, CSS, ReactJS" data-preview="https://www.envato.com" data-img="C:\Users\FAIZ AHMAD\Music\Finance\work5.jpg" id="opengallery">
-                <img src="C:\Users\FAIZ AHMAD\Music\Finance\work5.jpg" alt="img5" class="filter-item video">
+            <div class="portfolio-item filter-item video" data-title="SASS Project" data-client="Themeforest" data-language="HTML, CSS, ReactJS" data-preview="https://www.envato.com" data-img="https://images.pexels.com/photos/32764214/pexels-photo-32764214.jpeg" id="opengallery">
+                <img src="https://images.pexels.com/photos/32764214/pexels-photo-32764214.jpeg" alt="img5" class="filter-item video">
                     <div class="overlay">
                         <span class="overlay-text">SASS PROJECT</span>
                     </div>
             </div>
 
-            <div class="portfolio-item filter-item logo" data-title="Mockup Project" data-client="Themeforest" data-language="HTML, CSS, JS" data-preview="https://www.pexels.com" data-img="C:\Users\FAIZ AHMAD\Music\Finance\work6.jpg" id="opengallery">
-                <img src="C:\Users\FAIZ AHMAD\Music\Finance\work6.jpg" alt="img6" class="filter-item logo">
+            <div class="portfolio-item filter-item logo" data-title="Mockup Project" data-client="Themeforest" data-language="HTML, CSS, JS" data-preview="https://www.pexels.com" data-img="https://images.pexels.com/photos/32764218/pexels-photo-32764218.jpeg" id="opengallery">
+                <img src="https://images.pexels.com/photos/32764218/pexels-photo-32764218.jpeg" alt="img6" class="filter-item logo">
                     <div class="overlay">
                         <span class="overlay-text">MOCKUP PROJECT</span>
                     </div>
             </div>
 
-            <div class="portfolio-item filter-item graphic" data-title="Facebook Project" data-client="Facebook" data-language="HTML, CSS, JS" data-preview="https://www.facebook.com" data-img="C:\Users\FAIZ AHMAD\Music\Finance\work7.jpg" id="opengallery">
-                <img src="C:\Users\FAIZ AHMAD\Music\Finance\work7.jpg" alt="img6" class="filter-item graphic">
+            <div class="portfolio-item filter-item graphic" data-title="Facebook Project" data-client="Facebook" data-language="HTML, CSS, JS" data-preview="https://www.facebook.com" data-img="https://images.pexels.com/photos/32764259/pexels-photo-32764259.jpeg" id="opengallery">
+                <img src="https://images.pexels.com/photos/32764259/pexels-photo-32764259.jpeg" alt="img6" class="filter-item graphic">
                     <div class="overlay">
                         <span class="overlay-text">FACEBOOK PROJECT</span>
                     </div>
             </div>
 
-            <div class="portfolio-item filter-item mockup" data-title="Dribble Project" data-client="Dribble" data-language="HTML, CSS, JS" data-preview="https://www.dribble.com" data-img="C:\Users\FAIZ AHMAD\Music\Finance\work8.jpg" id="opengallery">
-                <img src="C:\Users\FAIZ AHMAD\Music\Finance\work8.jpg" alt="img6" class="filter-item mockup">
+            <div class="portfolio-item filter-item mockup" data-title="Dribble Project" data-client="Dribble" data-language="HTML, CSS, JS" data-preview="https://www.dribble.com" data-img="https://images.pexels.com/photos/32764265/pexels-photo-32764265.jpeg" id="opengallery">
+                <img src="https://images.pexels.com/photos/32764265/pexels-photo-32764265.jpeg" alt="img6" class="filter-item mockup">
                     <div class="overlay">
                         <span class="overlay-text">DRIBBLE PROJECT</span>
                     </div>
             </div>
 
-            <div class="portfolio-item filter-item mockup" data-title="Behence Project" data-client="Behance" data-language="HTML, CSS, JS" data-preview="https://www.behance.com" data-img="C:\Users\FAIZ AHMAD\Music\Finance\work9.jpg" id="opengallery">
-                <img src="C:\Users\FAIZ AHMAD\Music\Finance\work9.jpg" alt="img6" class="filter-item mockup">
+            <div class="portfolio-item filter-item mockup" data-title="Behence Project" data-client="Behance" data-language="HTML, CSS, JS" data-preview="https://www.behance.com" data-img="https://images.pexels.com/photos/32764275/pexels-photo-32764275.jpeg" id="opengallery">
+                <img src="https://images.pexels.com/photos/32764275/pexels-photo-32764275.jpeg" alt="img6" class="filter-item mockup">
                     <div class="overlay">
                         <span class="overlay-text">BEHENCE PROJECT</span>
                 </div>
@@ -1985,48 +1985,48 @@ section.hidden {
 
             <!-- Blog cards parts here -->
             <div class="blog-card-container">
-                <div class="blog-card" data-title="How to Own Your Audience by Creating an Email List" data-author="Faiz" data-date="21 April 2025" data-tags="wordpress, business, economy, design" data-img="C:\Users\FAIZ AHMAD\Music\Finance\blog1.jpg" data-content='<p style="text-align: justify; padding: 20px 63px 0 63px;">Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack bonnet arse over tit burke bugger all mate bodge. cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Suspendisse interdum consectetur libero id faucibu nisl. Lacus vel facilisis volutpat est velit egestas.</p><blockquote style="display: flex; align-items: flex-start; padding: 0 60px;"><i class="bi bi-quote text-yellow" style="font-size: 100px; margin-right: 15px; margin-top: 0;"></i><p style="text-align: justify; margin: 0;"><i>Most photographers find it hard to see interesting pictures in places in which they are most familiar. A trip somewhere new seems always exactly what our photography needed, as shooting away from home consistently inspires us to new artistic heights.</i></p></blockquote><p style="text-align: justify; padding: 20px 63px 0 63px;">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Riosum dolor sit. amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'>
-                    <img src="C:\Users\FAIZ AHMAD\Music\Finance\blog1.jpg" alt="Blog 1">
+                <div class="blog-card" data-title="How to Own Your Audience by Creating an Email List" data-author="Faiz" data-date="21 April 2025" data-tags="wordpress, business, economy, design" data-img="https://images.pexels.com/photos/32764332/pexels-photo-32764332.jpeg" data-content='<p style="text-align: justify; padding: 20px 63px 0 63px;">Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack bonnet arse over tit burke bugger all mate bodge. cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Suspendisse interdum consectetur libero id faucibu nisl. Lacus vel facilisis volutpat est velit egestas.</p><blockquote style="display: flex; align-items: flex-start; padding: 0 60px;"><i class="bi bi-quote text-yellow" style="font-size: 100px; margin-right: 15px; margin-top: 0;"></i><p style="text-align: justify; margin: 0;"><i>Most photographers find it hard to see interesting pictures in places in which they are most familiar. A trip somewhere new seems always exactly what our photography needed, as shooting away from home consistently inspires us to new artistic heights.</i></p></blockquote><p style="text-align: justify; padding: 20px 63px 0 63px;">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Riosum dolor sit. amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'>
+                    <img src="https://images.pexels.com/photos/32764332/pexels-photo-32764332.jpeg" alt="Blog 1">
                     <div class="blog-content">
                         <h3>How to Own Your Audience by Creating an Email List</h3>
                         <p>Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack b</p>
                     </div>
                 </div>
 
-                <div class="blog-card" data-title="Top 10 Toolkits for Deep Learning in 2022" data-author="Faiz" data-date="25 April 2025" data-tags="wordpress, business, economy, design" data-img="C:\Users\FAIZ AHMAD\Music\Finance\blog2.jpg" data-content='<p style="text-align: justify; padding: 20px 63px 0 63px;">Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack bonnet arse over tit burke bugger all mate bodge. cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Suspendisse interdum consectetur libero id faucibu nisl. Lacus vel facilisis volutpat est velit egestas.</p><blockquote style="display: flex; align-items: flex-start; padding: 0 60px;"><i class="bi bi-quote text-yellow" style="font-size: 100px; margin-right: 15px; margin-top: 0;"></i><p style="text-align: justify; margin: 0;"><i>Most photographers find it hard to see interesting pictures in places in which they are most familiar. A trip somewhere new seems always exactly what our photography needed, as shooting away from home consistently inspires us to new artistic heights.</i></p></blockquote><p style="text-align: justify; padding: 20px 63px 0 63px;">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Riosum dolor sit. amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'>
-                    <img src="C:\Users\FAIZ AHMAD\Music\Finance\blog2.jpg" alt="Blog 2">
+                <div class="blog-card" data-title="Top 10 Toolkits for Deep Learning in 2022" data-author="Faiz" data-date="25 April 2025" data-tags="wordpress, business, economy, design" data-img="https://images.pexels.com/photos/32764331/pexels-photo-32764331.jpeg" data-content='<p style="text-align: justify; padding: 20px 63px 0 63px;">Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack bonnet arse over tit burke bugger all mate bodge. cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Suspendisse interdum consectetur libero id faucibu nisl. Lacus vel facilisis volutpat est velit egestas.</p><blockquote style="display: flex; align-items: flex-start; padding: 0 60px;"><i class="bi bi-quote text-yellow" style="font-size: 100px; margin-right: 15px; margin-top: 0;"></i><p style="text-align: justify; margin: 0;"><i>Most photographers find it hard to see interesting pictures in places in which they are most familiar. A trip somewhere new seems always exactly what our photography needed, as shooting away from home consistently inspires us to new artistic heights.</i></p></blockquote><p style="text-align: justify; padding: 20px 63px 0 63px;">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Riosum dolor sit. amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'>
+                    <img src="https://images.pexels.com/photos/32764331/pexels-photo-32764331.jpeg" alt="Blog 2">
                     <div class="blog-content">
                         <h3>Top 10 Toolkits for Deep Learning in 2022</h3>
                         <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</p>
                     </div>
                 </div>
 
-                <div class="blog-card" data-title="Everything You Need to Know About Web Accessibility" data-author="Faiz" data-date="29 April 2025" data-tags="wordpress, business, economy, design" data-img="C:\Users\FAIZ AHMAD\Music\Finance\blog3.jpg" data-content='<p style="text-align: justify; padding: 20px 63px 0 63px;">Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack bonnet arse over tit burke bugger all mate bodge. cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Suspendisse interdum consectetur libero id faucibu nisl. Lacus vel facilisis volutpat est velit egestas.</p><blockquote style="display: flex; align-items: flex-start; padding: 0 60px;"><i class="bi bi-quote text-yellow" style="font-size: 100px; margin-right: 15px; margin-top: 0;"></i><p style="text-align: justify; margin: 0;"><i>Most photographers find it hard to see interesting pictures in places in which they are most familiar. A trip somewhere new seems always exactly what our photography needed, as shooting away from home consistently inspires us to new artistic heights.</i></p></blockquote><p style="text-align: justify; padding: 20px 63px 0 63px;">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Riosum dolor sit. amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'>
-                    <img src="C:\Users\FAIZ AHMAD\Music\Finance\blog3.jpg" alt="Blog 3">
+                <div class="blog-card" data-title="Everything You Need to Know About Web Accessibility" data-author="Faiz" data-date="29 April 2025" data-tags="wordpress, business, economy, design" data-img="https://images.pexels.com/photos/32764329/pexels-photo-32764329.jpeg" data-content='<p style="text-align: justify; padding: 20px 63px 0 63px;">Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack bonnet arse over tit burke bugger all mate bodge. cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Suspendisse interdum consectetur libero id faucibu nisl. Lacus vel facilisis volutpat est velit egestas.</p><blockquote style="display: flex; align-items: flex-start; padding: 0 60px;"><i class="bi bi-quote text-yellow" style="font-size: 100px; margin-right: 15px; margin-top: 0;"></i><p style="text-align: justify; margin: 0;"><i>Most photographers find it hard to see interesting pictures in places in which they are most familiar. A trip somewhere new seems always exactly what our photography needed, as shooting away from home consistently inspires us to new artistic heights.</i></p></blockquote><p style="text-align: justify; padding: 20px 63px 0 63px;">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Riosum dolor sit. amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'>
+                    <img src="https://images.pexels.com/photos/32764329/pexels-photo-32764329.jpeg" alt="Blog 3">
                     <div class="blog-content">
                         <h3>Everything You Need to Know About Web Accessibility</h3>
                         <p>Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore ma</p>
                     </div>
                 </div>
 
-                <div class="blog-card" data-title="How to Inject Humor & Comedy Into Your Brand" data-author="Faiz" data-date="4 May 2025" data-tags="wordpress, business, economy, design" data-img="C:\Users\FAIZ AHMAD\Music\Finance\blog4.jpg" data-content='<p style="text-align: justify; padding: 20px 63px 0 63px;">Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack bonnet arse over tit burke bugger all mate bodge. cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Suspendisse interdum consectetur libero id faucibu nisl. Lacus vel facilisis volutpat est velit egestas.</p><blockquote style="display: flex; align-items: flex-start; padding: 0 60px;"><i class="bi bi-quote text-yellow" style="font-size: 100px; margin-right: 15px; margin-top: 0;"></i><p style="text-align: justify; margin: 0;"><i>Most photographers find it hard to see interesting pictures in places in which they are most familiar. A trip somewhere new seems always exactly what our photography needed, as shooting away from home consistently inspires us to new artistic heights.</i></p></blockquote><p style="text-align: justify; padding: 20px 63px 0 63px;">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Riosum dolor sit. amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'>
-                    <img src="C:\Users\FAIZ AHMAD\Music\Finance\blog4.jpg" alt="Blog 4">
+                <div class="blog-card" data-title="How to Inject Humor & Comedy Into Your Brand" data-author="Faiz" data-date="4 May 2025" data-tags="wordpress, business, economy, design" data-img="https://images.pexels.com/photos/32764334/pexels-photo-32764334.jpeg" data-content='<p style="text-align: justify; padding: 20px 63px 0 63px;">Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack bonnet arse over tit burke bugger all mate bodge. cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Suspendisse interdum consectetur libero id faucibu nisl. Lacus vel facilisis volutpat est velit egestas.</p><blockquote style="display: flex; align-items: flex-start; padding: 0 60px;"><i class="bi bi-quote text-yellow" style="font-size: 100px; margin-right: 15px; margin-top: 0;"></i><p style="text-align: justify; margin: 0;"><i>Most photographers find it hard to see interesting pictures in places in which they are most familiar. A trip somewhere new seems always exactly what our photography needed, as shooting away from home consistently inspires us to new artistic heights.</i></p></blockquote><p style="text-align: justify; padding: 20px 63px 0 63px;">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Riosum dolor sit. amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'>
+                    <img src="https://images.pexels.com/photos/32764334/pexels-photo-32764334.jpeg" alt="Blog 4">
                     <div class="blog-content">
                         <h3>How to Inject Humor & Comedy Into Your Brand</h3>
                         <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</p>
                     </div>
                 </div>
 
-                <div class="blog-card" data-title="Women in Web Design: How To Achieve Success" data-author="Faiz" data-date="10 May 2025" data-tags="wordpress, business, economy, design" data-img="C:\Users\FAIZ AHMAD\Music\Finance\blog5.jpg" data-content='<p style="text-align: justify; padding: 20px 63px 0 63px;">Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack bonnet arse over tit burke bugger all mate bodge. cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Suspendisse interdum consectetur libero id faucibu nisl. Lacus vel facilisis volutpat est velit egestas.</p><blockquote style="display: flex; align-items: flex-start; padding: 0 60px;"><i class="bi bi-quote text-yellow" style="font-size: 100px; margin-right: 15px; margin-top: 0;"></i><p style="text-align: justify; margin: 0;"><i>Most photographers find it hard to see interesting pictures in places in which they are most familiar. A trip somewhere new seems always exactly what our photography needed, as shooting away from home consistently inspires us to new artistic heights.</i></p></blockquote><p style="text-align: justify; padding: 20px 63px 0 63px;">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Riosum dolor sit. amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'>
-                    <img src="C:\Users\FAIZ AHMAD\Music\Finance\blog5.jpg" alt="Blog 5">
+                <div class="blog-card" data-title="Women in Web Design: How To Achieve Success" data-author="Faiz" data-date="10 May 2025" data-tags="wordpress, business, economy, design" data-img="https://images.pexels.com/photos/32764333/pexels-photo-32764333.jpeg" data-content='<p style="text-align: justify; padding: 20px 63px 0 63px;">Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack bonnet arse over tit burke bugger all mate bodge. cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Suspendisse interdum consectetur libero id faucibu nisl. Lacus vel facilisis volutpat est velit egestas.</p><blockquote style="display: flex; align-items: flex-start; padding: 0 60px;"><i class="bi bi-quote text-yellow" style="font-size: 100px; margin-right: 15px; margin-top: 0;"></i><p style="text-align: justify; margin: 0;"><i>Most photographers find it hard to see interesting pictures in places in which they are most familiar. A trip somewhere new seems always exactly what our photography needed, as shooting away from home consistently inspires us to new artistic heights.</i></p></blockquote><p style="text-align: justify; padding: 20px 63px 0 63px;">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Riosum dolor sit. amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'>
+                    <img src="https://images.pexels.com/photos/32764333/pexels-photo-32764333.jpeg" alt="Blog 5">
                     <div class="blog-content">
                         <h3>Women in Web Design: How To Achieve Success</h3>
                         <p>Jorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
                     </div>
                 </div>
 
-                <div class="blog-card" data-title="Evergreen versus topical content: An overview" data-author="Rio" data-date="21 April 2022" data-tags="wordpress, business, economy, design" data-img="C:\Users\FAIZ AHMAD\Music\Finance\blog6.jpg" data-content='<p style="text-align: justify; padding: 20px 63px 0 63px;">Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack bonnet arse over tit burke bugger all mate bodge. cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Suspendisse interdum consectetur libero id faucibu nisl. Lacus vel facilisis volutpat est velit egestas.</p><blockquote style="display: flex; align-items: flex-start; padding: 0 60px;"><i class="bi bi-quote text-yellow" style="font-size: 100px; margin-right: 15px; margin-top: 0;"></i><p style="text-align: justify; margin: 0;"><i>Most photographers find it hard to see interesting pictures in places in which they are most familiar. A trip somewhere new seems always exactly what our photography needed, as shooting away from home consistently inspires us to new artistic heights.</i></p></blockquote><p style="text-align: justify; padding: 20px 63px 0 63px;">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Riosum dolor sit. amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'>
-                    <img src="C:\Users\FAIZ AHMAD\Music\Finance\blog6.jpg" alt="Blog 6">
+                <div class="blog-card" data-title="Evergreen versus topical content: An overview" data-author="Rio" data-date="21 April 2022" data-tags="wordpress, business, economy, design" data-img="https://images.pexels.com/photos/32764330/pexels-photo-32764330.jpeg" data-content='<p style="text-align: justify; padding: 20px 63px 0 63px;">Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack bonnet arse over tit burke bugger all mate bodge. cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Suspendisse interdum consectetur libero id faucibu nisl. Lacus vel facilisis volutpat est velit egestas.</p><blockquote style="display: flex; align-items: flex-start; padding: 0 60px;"><i class="bi bi-quote text-yellow" style="font-size: 100px; margin-right: 15px; margin-top: 0;"></i><p style="text-align: justify; margin: 0;"><i>Most photographers find it hard to see interesting pictures in places in which they are most familiar. A trip somewhere new seems always exactly what our photography needed, as shooting away from home consistently inspires us to new artistic heights.</i></p></blockquote><p style="text-align: justify; padding: 20px 63px 0 63px;">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Riosum dolor sit. amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'>
+                    <img src="https://images.pexels.com/photos/32764330/pexels-photo-32764330.jpeg" alt="Blog 6">
                     <div class="blog-content">
                         <h3>Evergreen versus topical content: An overview</h3>
                         <p>Still ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
@@ -2547,41 +2547,40 @@ section.hidden {
 
     <!-- JS to hide Formspree interface after sending message -->
     <script>
-document.getElementById("contact-form").addEventListener("submit", function(e) {
-  e.preventDefault();
+    document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
 
-  const form = e.target;
-  const formData = new FormData(form);
+    const form = e.target;
+    const formData = new FormData(form);
 
-  fetch("https://formspree.io/f/mjkrjanb", {
-    method: "POST",
-    body: formData,
-    headers: { 'Accept': 'application/json' }
-  }).then(response => {
-    if (response.ok) {
-      showToast("Message sent successfully!");
-      form.reset();
-    } else {
-      showToast("Something went wrong. Try again.");
+    fetch("https://formspree.io/f/mjkrjanb", {
+        method: "POST",
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+    }).then(response => {
+        if (response.ok) {
+        showToast("Message sent successfully!");
+        form.reset();
+        } else {
+        showToast("Something went wrong. Try again.");
+        }
+    }).catch(error => {
+        showToast("Network error. Please try later.");
+    });
+    });
+
+    function showToast(msg) {
+    const toast = document.getElementById("toast");
+    toast.textContent = msg;
+    toast.classList.remove("hidden");
+    toast.classList.add("show");
+
+    setTimeout(() => {
+        toast.classList.remove("show");
+        toast.classList.add("hidden");
+    }, 3000);
     }
-  }).catch(error => {
-    showToast("Network error. Please try later.");
-  });
-});
-
-function showToast(msg) {
-  const toast = document.getElementById("toast");
-  toast.textContent = msg;
-  toast.classList.remove("hidden");
-  toast.classList.add("show");
-
-  setTimeout(() => {
-    toast.classList.remove("show");
-    toast.classList.add("hidden");
-  }, 3000);
-}
-</script>
-
+    </script>
 
 </body>
 </html>
