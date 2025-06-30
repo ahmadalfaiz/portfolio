@@ -1717,14 +1717,14 @@ section.hidden {
                                     <p>First Name: <strong>Faiz</strong></p>
                                     <p>Age: <strong>21 Years</strong></p>
                                     <p>Freelance: <span class="available">Available</span></p>
-                                    <p>Phone: <a href="tel:+21621184010">+919060268704</a></p>
+                                    <p>Phone: <a href="tel:+919060268704">+919060268704</a></p>
                                     <p>Insta: <strong>ahmad_al_faiz484</strong></p>
                                 </div>
                                 <div class="info-col">
                                     <p>Last Name: <strong>Al-Ahmad</strong></p>
                                     <p>Nationality: <strong>Indian</strong></p>
                                     <p>Address: <strong>Patna, India</strong></p>
-                                    <p>Email: <a href="mailto:you@mail.com">ahmad4884faiz@gmail.com</a></p>
+                                    <p>Email: <a href="mailto:ahmad4884faiz@gmail.com">ahmad4884faiz@gmail.com</a></p>
                                     <p>Languages: <strong>Hin, Eng, Ur, Arb, Heb</strong></p>
                                 </div>
                             </div>
