@@ -2087,6 +2087,14 @@ section.hidden {
                         <p>In today’s connected and fast-paced world, stress is almost always present. To manage it well, building healthy</p>
                     </div>
                 </div>
+
+                <div class="blog-card" data-title="The History and Evolution of the Internet: A Deep Dive" data-author="Faiz" data-date="12 June 2025" data-tags="wordpress, business, economy, design" data-img="https://images.pexels.com/photos/33098074/pexels-photo-33098074.jpeg" data-content='<p style="text-align: justify; padding: 20px 63px 0 63px;">The internet&apos;s origins go back to the late 1960s. It started as ARPANET, a U.S. military project focused on communication redundancy. Gradually, it grew from simple data exchange between computers into a vast global network. Tim Berners-Lee invented the World Wide Web in 1989, which changed the internet forever. It made information accessible to the general public through browsers and hyperlinks.</p><blockquote style="display: flex; align-items: flex-start; padding: 0 60px;"><i class="bi bi-quote text-yellow" style="font-size: 100px; margin-right: 15px; margin-top: 0;"></i><p style="text-align: justify; margin: 0;"><i>From dial-up modems to high-speed fiber optics, the internet&apos;s infrastructure has changed significantly. It now powers everything from smartphones to smart homes. The rise of social media, cloud computing, and e-commerce shows its impact on daily life and global economies.</i></p></blockquote><p style="text-align: justify; padding: 20px 63px 0 63px;">The internet&apos;s evolution includes key milestones: moving from static web pages (Web 1.0) to user-generated content (Web 2.0), and now to the decentralized, AI-powered future (Web 3.0). It has transformed industries such as education, healthcare, entertainment, and commerce, making services more efficient and accessible. Broadband expansion, mobile connectivity, and wireless technologies have connected billions of people online. However, this rapid growth has also raised concerns about privacy, data security, misinformation, and digital divides. The introduction of 5G, IoT, and AI integration is pushing boundaries further, leading to a highly connected society. As we move deeper into the digital age, understanding the internet&apos;s roots and its future helps us navigate its advantages and challenges more responsibly.</p>'>
+                    <img src="https://images.pexels.com/photos/33098074/pexels-photo-33098074.jpeg" alt="Blog 9">
+                    <div class="blog-content">
+                        <h3>The History and Evolution of the Internet: A Deep Dive</h3>
+                        <p>The internet&apos;s origins go back to the late 1960s. It started as ARPANET, a U.S. military project</p>
+                    </div>
+                </div>
             </div>
         </section>
 
